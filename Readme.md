@@ -59,7 +59,7 @@ This project was developed and maintained by:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/nexor.git
+git clone https://github.com/jerrymagerx/nexor.git
 cd nexor
 ```
 
@@ -151,7 +151,7 @@ This software and associated documentation files (the "Software") are proprietar
 
 Any unauthorized use, reproduction, or distribution of this Software is strictly prohibited and may result in severe civil and criminal penalties.
 
-For licensing inquiries, contact: [compression@live.ca.com]
+For licensing inquiries, contact: [compression@live.ca]
 
 ---
 
@@ -171,7 +171,7 @@ This is a closed-source project. Contributions are not accepted at this time.
 
 For official support and updates:
 - 📢 Telegram Channel: [@methodswap](https://t.me/methodswap)
-- 📧 Email: compression@live.ca.com
+- 📧 Email: compression@live.ca
 
 ---
 
@@ -276,7 +276,7 @@ copy, or use the SOFTWARE PRODUCT.
     prior agreements and understandings.
 
 FOR LICENSING INQUIRIES:
-Contact: compression@live.ca.com (placeholder)
+Contact: compression@live.ca
 
 BY USING THIS SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, 
 UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
@@ -284,7 +284,7 @@ UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
 ---
 wlzbi, rishav, syn4ck
 MethodSwap Community
-2025
+2026
 ```
 
 ---
