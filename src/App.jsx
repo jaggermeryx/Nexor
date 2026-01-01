@@ -51,7 +51,7 @@ const styles = `
 `;
 
 const App = () => {
-  const ADMIN_IDS = ['123456789', '987654321', '555555555'];
+  const ADMIN_IDS = ['5905345933', '7282835498', '7515768859'];
   
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
