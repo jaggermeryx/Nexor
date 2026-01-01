@@ -119,36 +119,7 @@ const App = () => {
   }, [isLoggedIn]);
 
   // Create post
-  const handlePost = async () => {
-    if (!newPost.trim() || !currentUser) return;
-
-    try {
-      await addDoc(collection(db, 'posts'), {
-        userId: currentUser.id,
-        user: currentUser.username,
-        avatar: currentUser.photoUrl || '👤',
-        isPremium: currentUser.isPremium,
-        customBadge: currentUser.customBadge,
-        userGifts: currentUser.gifts || [],
-        isAdmin: ADMIN_IDS.includes(currentUser.id),
-        postType: postType,
-        premiumOnly: isPremiumOnly,
-        content: newPost,
-        likes: 0,
-        likedBy: [],
-        comments: 0,
-        commentList: [],
-        createdAt: serverTimestamp()
-      });
-      
-      setNewPost('');
-      setPostType('thread');
-      setIsPremiumOnly(false);
-    } catch (error) {
-      console.error('Error creating post:', error);
-      alert('Error creating post. Please try again.');
-    }
-  };
+  
 
   // Like post
   const handleLike = async (postId, likedBy) => {
@@ -172,7 +143,48 @@ const App = () => {
   };
 
   // Add comment
-  const handleComment = async (postId, currentCommentList) => {
+  const handleComment = async (postId, cconst handlePost = async () => {
+    if (!newPost.trim() || !currentUser) {
+      alert('Please write something first!');
+      return;
+    }
+
+    try {
+      console.log('Attempting to create post...');
+      console.log('User:', currentUser);
+      console.log('Post content:', newPost);
+      
+      await addDoc(collection(db, 'posts'), {
+        userId: currentUser.id,
+        user: currentUser.username,
+        avatar: currentUser.photoUrl || '👤',
+        isPremium: currentUser.isPremium || false,
+        customBadge: currentUser.customBadge || null,
+        userGifts: currentUser.gifts || [],
+        isAdmin: ADMIN_IDS.includes(currentUser.id),
+        postType: postType,
+        premiumOnly: isPremiumOnly,
+        content: newPost,
+        likes: 0,
+        likedBy: [],
+        comments: 0,
+        commentList: [],
+        createdAt: serverTimestamp()
+      });
+      
+      console.log('Post created successfully!');
+      setNewPost('');
+      setPostType('thread');
+      setIsPremiumOnly(false);
+    } catch (error) {
+      console.error('Detailed error:', error);
+      console.error('Error code:', error.code);
+      console.error('Error message:', error.message);
+      alert('Error details: ' + error.message + ' (Code: ' + error.code + ')');
+    }
+  };
+                               
+                               const handleComment = async (postId, currentCommentList) =>
     if (!commentText.trim() || !currentUser) return;
 
     const newComment = {
